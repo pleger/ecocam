@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>.:: Ecocam 2011 ::.</title>
+		<link rel="stylesheet" type="text/css" href="lib/css/cubos.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="lib/css/login.css" media="screen" />
+		<link rel="stylesheet" type="text/css" href="lib/css/jqueryui/jquery-ui-1.8.16.custom.css" media="screen" />
+		<script src="lib/jquery/jquery-1.6.2.min.js"></script>
+		<script src="lib/jquery/jquery-ui-1.8.16.custom.min.js"></script>		
+		<script src="lib/jquery/jquery.alphanumeric.pack.js"></script>		
+		<script src="lib/jquery/jquery.blockUI.js"></script>				
+		<script src="lib/rn.js" language="JavaScript"></script>		
+		<script src="lib/iu.js" language="JavaScript"></script>
+		<script src="lib/login.js" language="JavaScript"></script>		
+		<script type="text/javascript" language="javascript" src="AspectScript/aspectscript/aspectscript.js"></script>
+		<!--
+			<script language="javascript" src="lib/main.js"></script>		
+			<script language="javascript" src="http://www.pleiad.cl/ecocam/AspectScript/aspectscript/jst.php?url=http://pleiad.cl/ecocam/lib/main.js"></script>
+			
+		-->
+		<script language="javascript" src="http://www.pleiad.cl/ecocam/AspectScript/aspectscript/jst.php?url=http://www.pleiad.cl/ecocam/lib/main.js"></script>
+		<script language="JavaScript" src="AspectLib/pointcuts.js"></script>				
+		<script language="JavaScript" src="AspectLib/aspects.js"></script>		
+		<script language="JavaScript" src="AspectLib/registroEventos.js"></script>		
+    </head>
+    <body>    
+    	<br />
+    	<div id="gui">
+    	<div id="super-wrapper">
+	    	<div id="wrapper">
+	    		<div id="nube">
+	    			<div id="operadores">
+		    			<span id="numero-izquierdo">19</span> <span id="operando">+</span> <span id="numero-derecho">13</span> <span id="signo-igualdad">=</span><textarea id="caja-respuesta-nube"></textarea>		    				
+	    			</div>
+	    		</div>
+				<div id="representacion-iconica">
+					<div id="wrapper-cubetas">
+						<div class="wrapper-cubeta-izquierda">
+							<br />
+							<div id="cubeta-izquierda">
+								<textarea class="caja-respuesta-representacion-iconica" readonly="true"></textarea>							
+								<img class="equivalencia" src="lib/css/images/equivalencia.png" />
+								<div class="cubeta">
+								</div>
+							</div>					
+						</div>
+						<div id="wrapper-simbolo-intermedio">
+							<a id="vaciar" href="#"><img src="lib/css/images/vaciar.png" /></a>
+							<span class="operacion"></span>							
+						</div>
+						<div class="wrapper-cubeta-derecha">
+							<br />							
+							<div id="cubeta-derecha">
+								<div class="cubeta">
+								</div>
+								<img class="equivalencia" src="lib/css/images/equivalencia.png" />
+								<textarea class="caja-respuesta-representacion-iconica" readonly="true"></textarea>
+							</div>					
+						</div>
+					</div>
+					<div id="wrapper-recipiente-resultado-final">
+						<div id="recipiente-resultado-final">
+							<div class="wrapper-cubeta-central">
+								<div id="cubeta-central">
+									<div class="cubeta">
+									</div>
+									<img class="equivalencia" src="lib/css/images/equivalencia.png" />
+									<textarea class="caja-respuesta-representacion-iconica"></textarea>
+								</div>					
+							</div>							
+						</div>
+					</div>
+				</div>
+	    	</div>
+		</div>
+		<div class="contenedor-resultado" style="display:none;">
+		
+		</div>
+		</div>
+		<div id="login">
+			<table id="elementos-login">
+				<tbody>
+					<tr>
+						<th>Usuario</th>
+						<th>:</th>
+						<th>
+							<input type="text" id="user-text"/>
+						</th>					
+					</tr>
+					<tr>
+						<th>Colegio</th>
+						<th>:</th>
+						<th>
+							<select id="colegio-login">
+							</select>
+						</th>					
+					</tr>					
+				</tbody>
+			</table>
+			<p><input type="button" id="registrar-login" value="Registrar"/></p>
+		</div>
+    </body>
+</html>

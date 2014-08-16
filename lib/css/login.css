@@ -1,0 +1,14 @@
+
+#login{
+	display:none;
+	cursor:default;
+	text-align:center;
+}
+
+#colegio-login{
+	width:220px;
+}
+
+.ui-dialog-titlebar-close{
+	display:none;
+}

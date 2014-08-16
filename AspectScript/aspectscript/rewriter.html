@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Parser Test</title>
+    <script type="text/javascript" src="jsparse.js"></script>
+    <script type="text/javascript" src="jsrewrite.js"></script>
+    <script type="text/javascript" src="aspectscript.js"></script>
+</head>
+<body>
+    <h1>AspectScript off-line rewriter</h1>
+
+    <form name="form" enctype="multipart/form-data" method="post" action="#">
+        <table>
+            <tr>
+                <td>Choose file:</td>
+                <td><input type="file" size="70" name="fileForUpload"/></td>
+            </tr>
+            <tr>
+                <td>Support these join points:</td>
+                <td>
+                    <input type="checkbox" id="jp_new" checked="checked" disabled="disabled">New&nbsp;
+                    <input type="checkbox" id="jp_init" checked="checked" disabled="disabled">Init&nbsp;
+                    <input type="checkbox" id="jp_call" checked="checked" disabled="disabled">Call&nbsp;
+                    <input type="checkbox" id="jp_exec" checked="checked" disabled="disabled">Exec&nbsp;
+                    <input type="checkbox" id="jp_pread" checked="checked" disabled="disabled">Prop. read&nbsp;
+                    <input type="checkbox" id="jp_pwrite" checked="checked" disabled="disabled">Prop. write&nbsp;
+                    <input type="checkbox" id="jp_vread" checked="checked">Var read&nbsp;
+                    <input type="checkbox" id="jp_vwrite" checked="checked">Var write
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" onclick="doIt(rewrite)" value="Rewrite" style="width:150px"/>
+                    <input type="button" onclick="doIt(pp)" value="Pretty print" style="width:150px"/>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <h2>Output</h2>
+
+    <table border="1">
+        <tr>
+            <td colspan="2">
+                <textarea id="output" cols="100" rows="20"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <pre id="visit">.</pre>
+            </td>
+        </tr>
+        <tr valign="top">
+            <td>
+                <pre id="parsing">.</pre>
+            </td>
+            <td>
+                <pre id="output_">.</pre>
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+<script type="text/javascript">
+    function rewrite(source){
+        var jpModel = {
+            jpNew: document.getElementById("jp_new").checked,
+            jpInit: document.getElementById("jp_init").checked,
+            jpCall: document.getElementById("jp_call").checked,
+            jpExec: document.getElementById("jp_exec").checked,
+            jpPropRead: document.getElementById("jp_pread").checked,
+            jpPropWrite: document.getElementById("jp_pwrite").checked,
+            jpVarRead: document.getElementById("jp_vread").checked,
+            jpVarWrite: document.getElementById("jp_vwrite").checked
+        };
+
+        var r = AspectScriptRewrite.rewrite(source, jpModel) + "";
+        r = r.replace(/&/g, "&amp;");
+        r = r.replace(/</g, "&lt;");
+        r = r.replace(/>/g, "&gt;");
+        document.getElementById("output").innerHTML += ("\n" + r);
+    }
+
+    function pp(source){
+        var r = AspectScriptRewrite.prettyPrint(source) + "";
+        r = r.replace(/&/g, "&amp;");
+        r = r.replace(/</g, "&lt;");
+        r = r.replace(/>/g, "&gt;");
+        document.getElementById("output").innerHTML += ("\n" + r);
+    }
+
+    function doIt(fun){
+        var fileForUpload = document.forms[0].fileForUpload;
+
+        if(fileForUpload.files){
+            var fileContents = fileForUpload.files.item(0).getAsBinary();
+            //alert(fileContents);
+            document.getElementById("visit").innerHTML = "";
+            document.getElementById("parsing").innerHTML = "";
+            document.getElementById("output").innerHTML = "";
+            fun(fileContents);
+        }
+        else{
+            alert(">>> Cannot read file binary contents!");
+        }
+    }
+</script>
+</html>

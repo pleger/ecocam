@@ -1,0 +1,216 @@
+#super-wrapper{
+	margin:0 auto 0 auto;
+	width:750px;
+}
+
+#wrapper{
+	min-height:240px;
+	border: solid 3px gray;
+}
+
+
+#nube{
+	background-image: url(images/nube.png);
+	background-repeat: no-repeat;
+	background-position:top;
+	margin-top:10px;
+	height:202px;
+}
+
+#operadores{
+	vertical-align:middle;
+	text-align:center;
+	padding-top:75px;
+	font-family:Tahoma;
+	font-size:55px;
+}
+
+#caja-respuesta-nube{
+	vertical-align:top;
+	margin-right:30px;
+	border:2px darkblue solid;
+	font-family:Tahoma;
+	font-size:50px;
+	text-align:center;
+	height:65px;
+	width:70px;
+	overflow: hidden;
+}
+
+img{
+	border:0px;
+}
+
+#siguiente{
+	vertical-align:middle;
+}
+
+#representacion-iconica{
+	margin-top:40px;
+}
+
+.wrapper-cubeta-izquierda{
+	display:inline-block;
+	border-bottom:solid 2px darkgray;
+	padding:0 5px 7px 5px;
+	margin-left:20px;
+	width: 265px;
+	vertical-align:bottom;
+}
+
+.wrapper-cubeta-derecha{
+	display:inline-block;
+	border-bottom:solid 2px darkgray;
+	padding:0 5px 7px 5px;
+	width: 265px;	
+	vertical-align:bottom;	
+}
+
+.centrar{
+	text-align:center;	
+}
+
+.cubeta{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#wrapper-recipiente-resultado-final{
+	padding:0px 40px 20px;
+}
+
+#recipiente-resultado-final{
+	border-bottom:solid 2px darkgray;
+	border-left:solid 2px darkgray;
+	border-right:solid 2px darkgray;
+	min-height:150px;
+	padding-bottom:20px;
+}
+
+
+#cubeta-izquierda{
+	display:inline-block;
+}
+
+#cubeta-derecha{
+	display:inline-block;
+}
+
+.equivalencia{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+#vaciar img{
+	vertical-align:text-top;
+}
+
+.caja-respuesta-representacion-iconica{
+	vertical-align:top;
+	border:2px darkblue solid;
+	font-family:Tahoma;
+	font-size:29px;
+	text-align:center;
+	height:39px;
+	width:39px;
+	vertical-align:middle;
+	overflow: hidden;
+}
+
+.wrapper-cubeta-central{
+	padding-left: 200px; 
+	padding-right: 0px; 
+	padding-top: 50px;
+}
+
+.wrapper-cubeta-central .caja-respuesta-representacion-iconica{
+	width:70px;
+	font-size:50px;
+	height:65px;
+}
+
+.reglon{
+	width:194px;
+	display:block;
+}
+
+.decena{
+	width:189px;
+	height:20px;
+	background-color:yellow;
+	border-color:black;
+	border:solid 1px;
+	display:inline-block;	
+}
+
+.decena-final{
+	width:179px;
+	height:20px;
+	background-color:yellow;
+	border-color:black;
+	border:solid 1px;
+	display:inline-block;	
+}
+
+.quinquena{
+	width:94px;
+	height:20px;
+	background-color:#0033FF;
+	/*border-bottom:solid 1px black;*/
+	border-top:solid 1px black;
+	border-right:solid 1px black;	display:inline-block;		
+}
+
+.unidad{
+	width:18px;
+	height:20px;
+	background-color:red;
+	display:inline-block;	
+	/*border-bottom:solid 1px black;*/
+	border-top:solid 1px black;
+	border-right:solid 1px black;
+	overflow:hidden;
+	
+}
+
+.primero{
+	border-left:solid 1px black;
+}
+
+.inferior{
+	border-bottom:solid 1px black;
+}
+
+.contenedor-resultado{
+	text-align:center;
+	background-color:green;
+	height:200px;
+	width:127px;
+}
+
+
+#wrapper-simbolo-intermedio{
+	margin-left:40px;
+	margin-right:40px;
+	display:inline-block;
+}
+
+.operacion{
+	width:68px;
+	height:62px;
+    font-family: "Tahoma";
+    font-size: 55px;
+    text-align: center;	
+}
+
+/***
+ * CLASES AUXILIARES --> SE ANADEN EN TIEMPO DE EJECUCION
+ */
+
+.deshabilitado{
+	background-color:activecaption;
+}
+
+.dashed-line{
+	border: dashed 1px black;
+}
