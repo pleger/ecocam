@@ -23,7 +23,7 @@
     break;
   }
   case 4:
-    $colegio = $_POST['colegio'];
+    $colegio = $_GET['colegio'];
     $rn->registrarColegio($colegio);
     break;
 ?>
