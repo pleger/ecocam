@@ -16,6 +16,5 @@
   $nombreAlumno = $rn->getNombreAlumno($datosAlumno);
 
   //acciones
-  $rn->registrarColegio($path);
   $rn->registrarEventosAlumno($nombreAlumno,$path,$eventos);
 ?>
