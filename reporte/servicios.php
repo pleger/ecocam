@@ -24,7 +24,7 @@
   case 4:
     $colegio = $_GET['colegio'];
     $rn->registrarColegio($colegio);
-    print "$colegio creado con exito.";
+    print "Colegio $colegio creado con exito.";
     break;
   }
 ?>
